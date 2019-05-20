@@ -13,6 +13,7 @@ class Instructions extends Component {
   }
   componentDidMount(){
     store.subscribe(() => {
+      const returnedState = store.getState()
       this.setState({
         instructions: returnedState.instructions
       })

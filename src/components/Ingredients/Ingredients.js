@@ -7,7 +7,7 @@ class Ingredients extends Component {
     super(props);
     const returnedState = store.getState()
     this.state = {
-      ingredientList: returnedState.ingredientList,
+      ingredients: returnedState.ingredients,
       input: ''
     };
   }
@@ -15,7 +15,7 @@ class Ingredients extends Component {
     store.subscribe(() => {
       const returnedState = store.getState()
       this.setState({
-        ingredientList: returnedState.ingredientList
+        ingredients: returnedState.ingredients
       })
     })
   }

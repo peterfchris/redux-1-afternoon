@@ -34,10 +34,10 @@ class Name extends Component {
     });
   }
   saveChanges() {
-    state.dispatch({
+    store.dispatch({
       payload: this.state.name, type: UPDATE_NAME
     })
-    state.dispatch({
+    store.dispatch({
       payload: this.state.category, type: UPDATE_CATEGORY
     })
   }

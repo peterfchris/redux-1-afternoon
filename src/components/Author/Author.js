@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import './Author.css';
-import store, {UPDATE_AUTHOR_FIRST, UPDATE_AUTHOR_LAST} from '../../store'
+import store, {UPDATE_FIRST, UPDATE_LAST} from '../../store'
 
 class Author extends Component {
   constructor(props) {
@@ -25,11 +25,11 @@ class Author extends Component {
     });
   }
   saveChanges() {
-    state.dispatch({
-      type: UPDATE_AUTHOR_FIRST, payload: this.state.authorFirst
+    store.dispatch({
+      type: UPDATE_FIRST, payload: this.state.authorFirst
     })
-    state.dispatch({
-      type: UPDATE_AUTHOR_LAST, payload: this.state.authorLast
+    store.dispatch({
+      type: UPDATE_LAST, payload: this.state.authorLast
     })
   }
   render() {
